@@ -1,8 +1,12 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class babyKYBER {
+public class KYBER_8 {
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
         KYBEROperations ops = new KYBEROperations();
         Scanner input = new Scanner(System.in);
         int q = 17;
@@ -17,24 +21,7 @@ public class babyKYBER {
 
         String response = "";
 
-        /*BigInteger messArray = new BigInteger(message.getBytes());
 
-        System.out.println(messArray.toString(2));
-        System.out.println(Arrays.toString(ops.toBinary(message)));*/
-
-        //System.out.println(Arrays.toString(ops.polyDist(test,A[0][0])));
-
-        /* rounded array -> binary -> ascii -> message
-
-        int[] H = {0,17,0,0,17,0,0,0};
-
-        H = Arrays.stream(H).map(c -> c/q).toArray();
-
-        String binary = Arrays.toString(H).replaceAll("\\p{P}", "").replaceAll(" ", "");
-
-        int ascii = Integer.parseInt(binary, 2);
-
-        System.out.println(Arrays.toString(H));*/
 
         while(true) {
             System.out.println("Do you want to encrypt or decrypt? enter done to finish");
@@ -99,13 +86,13 @@ public class babyKYBER {
                     }
                 }
 
-                long elapsedTime = System.currentTimeMillis() - start; //does it need to move below print statement? it's below in RSA
                 System.out.println("Encrypted message displayed as:\nu\nv");
                 System.out.println(Arrays.toString(u[0]).replaceAll("\\p{P}", "") + " , " + Arrays.toString(u[1]).replaceAll("\\p{P}", ""));
                 for (int[] i: v) {
                     System.out.print(Arrays.toString(i).replaceAll("\\p{P}", "") + "  ");
                 }
 
+                long elapsedTime = System.currentTimeMillis() - start; //does it need to move below print statement? it's below in RSA
                 System.out.println("\n\nElapsed Time: " + elapsedTime + " milliseconds");
 
                 System.out.println();

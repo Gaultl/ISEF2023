@@ -78,8 +78,6 @@ public class KYBEROperations {
 
         byte[] bytenary = new BigInteger(binary, 2).toByteArray();
 
-
-
         return new String(bytenary, StandardCharsets.US_ASCII);
     }
 
